@@ -1,0 +1,38 @@
+package verbo;
+
+public class Verbo {
+	private String radical, sufixo;
+	
+	public Verbo(String radical, String sufixo) {
+		super();
+		this.radical = radical;
+		this.sufixo = sufixo;
+	}
+
+	public String getRadical() {
+		return radical;
+	}
+	
+	public void setRadical(String radical) {
+		this.radical = radical;
+	}
+
+	public String getSufixo() {
+		return sufixo;
+	}
+
+	public void setSufixo(String sufixo) {
+		this.sufixo = sufixo;
+	}
+	
+	public void conjugar() {
+		
+	}
+	
+	public static void main(String[] args) {
+		Verbo verbo = new Verbo("Cant", "ar");
+
+		System.out.println(verbo.getRadical());
+		verbo.conjugar();
+	}
+}

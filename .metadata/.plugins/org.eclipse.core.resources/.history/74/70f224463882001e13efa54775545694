@@ -1,0 +1,117 @@
+package cliente;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Usuario {
+	private String nome, email, nacionalidade;
+	private int quantidadeDePostagens, pontuacao;
+	private ArrayList<String> postagens;
+
+	public Usuario(String nome, String email, String nacionalidade) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.nacionalidade = nacionalidade;
+		this.pontuacao = 0;
+		this.quantidadeDePostagens = 0;
+		postagens = new ArrayList<String>();
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+	
+	public int getQuantidadeDePostagens() {
+		return quantidadeDePostagens;
+	}
+
+	public int getPontuacao() {
+		return pontuacao;
+	}
+	
+	public void alteraPontuacao(int delta) {
+		this.pontuacao += delta;
+		if(this.pontuacao < 0) {
+			this.pontuacao = 0;
+		}
+	}
+	
+	public void adicionaPostagem(String post) {
+		this.quantidadeDePostagens += 1;
+		this.postagens.add(post);
+	}
+	
+	public ArrayList<String> getPostagens() {
+		return this.postagens;
+	}
+
+	public static void main(String[] args) {
+		String nome, email, nacionalidade, post, opcao;
+		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+
+		Scanner sc = new Scanner(System.in);
+		
+		/*for(int i = 0; i < 3; i++) {
+			System.out.println("Escreva sua postagem: ");
+			post = sc.nextLine();
+			
+			
+			usuario.adicionaPostagem(post);
+		}
+		
+		System.out.println("Nome: " + usuario.getNome() + " Email: " + usuario.getEmail() + " Nacionalidade: " + usuario.getNacionalidade() + " Postagens: " + usuario.getPostagens() + " " + usuario.quantidadeDePostagens);
+		
+		usuario.alteraPontuacao(5);
+		
+		System.out.println(usuario.getPontuacao());
+		
+		usuario.alteraPontuacao(-8);
+		
+		System.out.println(usuario.getPontuacao());*/
+		
+		do {
+			System.out.println("Digite o nome do usuario: ");
+			nome = sc.nextLine();
+			System.out.println("Digite o email do usuario: ");
+			email = sc.nextLine();
+			System.out.println("Digite a nacionalidade do usuario: ");
+			nacionalidade = sc.nextLine();
+			
+			Usuario usuario = new Usuario(nome, email, nacionalidade);
+			
+			listaUsuarios.add(usuario);
+			
+			System.out.println("Adicionar outro usuario? ");
+			opcao = sc.nextLine();
+			
+			if(opcao.equals("n") || opcao.equals("nao")) {
+				break;
+			}
+		} while (true);
+		
+		for(int i = 0; i < listaUsuarios.size(); i++) {
+			System.out.println("Nome: " + listaUsuarios.get(i).getNome() + " Email: " + listaUsuarios.get(i).getEmail() + " Nacionalidade: " + listaUsuarios.get(i).getNacionalidade() + " Postagens: " + listaUsuarios.get(i).getPostagens() + " " + listaUsuarios.get(i).quantidadeDePostagens);
+		}
+	}
+}

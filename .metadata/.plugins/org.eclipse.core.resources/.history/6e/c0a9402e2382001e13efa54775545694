@@ -1,0 +1,32 @@
+package produtoEletronico;
+
+public class ProdutoEletronico {
+    private String nome;
+    private String marca;
+    private double preco;
+    private boolean ligado;
+
+    public ProdutoEletronico(String nome, String marca, double preco) {
+        this.nome = nome;
+        this.marca = marca;
+        this.preco = preco;
+        this.ligado = false;
+    }
+
+    public void ligar() {
+        ligado = true;
+        System.out.println(nome + " está ligado.");
+    }
+
+    public void desligar() {
+        ligado = false;
+        System.out.println(nome + " está desligado.");
+    }
+
+    public void exibirInformacoes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Marca: " + marca);
+        System.out.println("Preço: R$" + preco);
+        System.out.println("Status: " + (ligado ? "Ligado" : "Desligado"));
+    }
+}

@@ -1,0 +1,25 @@
+package keyboard;
+
+public class Keyboard {
+	private char caracter; 
+	private String texto;
+	
+	
+	
+	public static void main(String[] args) {
+	    f.addKeyListener(new KeyListener() {
+	        @Override
+	        public void keyTyped(KeyEvent e) {
+	        }
+
+	        @Override
+	        public void keyPressed(KeyEvent e) {
+	            System.out.println("Key pressed code=" + e.getKeyCode() + ", char=" + e.getKeyChar());
+	        }
+
+	        @Override
+	        public void keyReleased(KeyEvent e) {
+	        }
+	    });
+	}
+}
