@@ -1,9 +1,5 @@
-INDEX VERSION 1.134+C:\Users\02538968518\Java_Basicot1\.metadata\.plugins\org.eclipse.jdt.core
-978466222.index
-4162249856.index
-2537332386.index
-2314438708.index
+INDEX VERSION 1.134+C:\Users\valber\residencia_java\.metadata\.plugins\org.eclipse.jdt.core
 1865797976.index
-1667896412.index
+4162249856.index
 3842248246.index
-1803358133.index
+724439196.index

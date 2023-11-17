@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module Exemplo_aula {
-}
