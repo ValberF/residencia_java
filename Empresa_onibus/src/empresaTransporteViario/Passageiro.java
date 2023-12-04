@@ -1,12 +1,11 @@
 package empresaTransporteViario;
 
-public class Passageiro {
+public class Passageiro extends Pessoa {
 	private Cartao cartao;
-    private String nome;
     
-	public Passageiro(Cartao cartao, String nome) {
+	public Passageiro(Cartao cartao, String nome, String cpf) {
+		super(nome, cpf);
 		this.cartao = cartao;
-		this.nome = nome;
 	}
 
 	public Cartao getCartao() {
@@ -15,13 +14,5 @@ public class Passageiro {
 
 	public void setCartao(Cartao cartao) {
 		
-	}
-
-	public String getNome() {
-
-	}
-
-	public void setNome(String nome) {
-
 	}
 }
